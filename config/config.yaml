@@ -1,0 +1,15 @@
+# Runtime configuration — EDU-C2-046 Curriculum Change Impact Briefing Agent
+# Static identity fields belong in config/agent.yaml.
+
+max_retry: 3
+timeout_s: 60
+memory_enabled: true
+llm_provider: "azure_openai"
+llm_model: "azure-openai-deployment"
+
+hitl:
+  enabled: true
+  max_hitl: 3
+
+# Cat 2 has no autonomous budget loop. An optional LLM client may be injected
+# by the standalone adapter, but the workflow and its outputs are deterministic.
